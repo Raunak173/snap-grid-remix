@@ -74,7 +74,7 @@ const SnapGrid = ({ quizComponents, setQuizComponents }: any) => {
         className="relative bg-gray-100 border rounded-lg p-6 w-3/4 flex flex-col gap-y-2"
         style={{ minHeight: 600, width: 500 }}
       >
-        <div className="flex justify-between mb-4">
+        <div className="flex justify-between mb-4 text-black">
           {quizComponents.questionNumber && (
             <span
               className="font-bold cursor-pointer"
@@ -95,7 +95,7 @@ const SnapGrid = ({ quizComponents, setQuizComponents }: any) => {
 
         {quizComponents.progressBar && (
           <div
-            className="block h-2 rounded cursor-pointer bg-rose-400"
+            className="block h-2 rounded cursor-pointer bg-rose-400 text-black"
             onClick={() => handleEdit("ProgressBar")}
             style={{ backgroundColor: quizComponents.progressBar }}
           ></div>
@@ -103,7 +103,7 @@ const SnapGrid = ({ quizComponents, setQuizComponents }: any) => {
 
         {quizComponents.questionText && (
           <p
-            className="text-lg cursor-pointer"
+            className="text-lg cursor-pointer text-black"
             onClick={() => handleEdit("QuestionText")}
           >
             {quizComponents.questionText}
@@ -120,7 +120,7 @@ const SnapGrid = ({ quizComponents, setQuizComponents }: any) => {
         )}
 
         {quizComponents.options && Array.isArray(quizComponents.options) && (
-          <div className="flex flex-wrap justify-between">
+          <div className="flex flex-wrap justify-between text-black">
             {quizComponents.options.map((option: any, index: any) => (
               <div
                 key={index}

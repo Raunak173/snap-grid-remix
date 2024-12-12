@@ -48,8 +48,8 @@ const EditComponent: React.FC<EditComponentProps> = ({
 
   return (
     <div className="fixed top-0 left-0 w-full h-full bg-gray-700 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
-        <h2 className="text-xl font-bold">Edit {component}</h2>
+      <div className="bg-white p-6 sm:p-4 rounded-lg shadow-lg w-full sm:w-2/3 md:w-1/2 max-w-[95%]">
+        <h2 className="text-xl sm:text-lg font-bold">Edit {component}</h2>
         {component === "OptionsLayout" && Array.isArray(editedData) ? (
           editedData.map((option, index) => (
             <div key={index} className="mb-2">
@@ -57,10 +57,10 @@ const EditComponent: React.FC<EditComponentProps> = ({
                 type="text"
                 value={option.text}
                 onChange={(e) => handleChange(e, index, "text")}
-                className="p-2 border rounded"
+                className="p-2 border rounded w-full"
                 placeholder={`Option ${index + 1}`}
               />
-              <label className="ml-2">
+              <label className="ml-2 flex items-center">
                 Correct Answer
                 <input
                   type="checkbox"
@@ -77,7 +77,7 @@ const EditComponent: React.FC<EditComponentProps> = ({
               type="color"
               value={editedData}
               onChange={(e) => handleChange(e)}
-              className="p-2 border rounded"
+              className="p-2 border rounded w-full"
             />
           </div>
         ) : (
@@ -86,20 +86,20 @@ const EditComponent: React.FC<EditComponentProps> = ({
               type="text"
               value={editedData}
               onChange={(e) => handleChange(e)}
-              className="p-2 border rounded"
+              className="p-2 border rounded w-full"
             />
           </div>
         )}
         <div className="mt-4 flex justify-between">
           <button
             onClick={handleSave}
-            className="bg-blue-500 text-white px-4 py-2 rounded"
+            className="bg-blue-500 text-white px-4 py-2 rounded w-[48%]"
           >
             Save
           </button>
           <button
-            onClick={() => onSave(data)} // Cancel editing
-            className="bg-gray-500 text-white px-4 py-2 rounded"
+            onClick={() => onSave(data)}
+            className="bg-gray-500 text-white px-4 py-2 rounded w-[48%]"
           >
             Cancel
           </button>

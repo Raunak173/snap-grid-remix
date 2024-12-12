@@ -9,7 +9,7 @@ const ComponentItem = ({ type, label }: { type: string; label: string }) => {
   return (
     <div
       ref={dragRef}
-      className="p-2 border rounded mb-2 bg-white cursor-pointer shadow"
+      className="p-2 border rounded mb-2 bg-white cursor-pointer shadow text-black"
     >
       {label}
     </div>
@@ -19,7 +19,7 @@ const ComponentItem = ({ type, label }: { type: string; label: string }) => {
 const LeftDrawer = () => {
   return (
     <aside className="bg-gray-100 w-64 p-4 h-full border-r border-gray-300">
-      <h2 className="text-lg font-bold mb-4">Components</h2>
+      <h2 className="text-lg font-bold mb-4 text-black">Components</h2>
       <ComponentItem type="ProgressBar" label="Progress Bar" />
       <ComponentItem type="QuestionText" label="Question Text" />
       <ComponentItem type="OptionsLayout" label="4 Options Layout" />
