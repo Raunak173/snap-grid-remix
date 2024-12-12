@@ -23,7 +23,7 @@ export default function Index() {
     options: null,
   });
   return (
-    <div className="flex gap-x-10 items-start">
+    <div className="flex gap-x-10 items-start pt-20">
       <LeftDrawer />
       <SnapGrid
         quizComponents={quizComponents}
