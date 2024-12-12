@@ -1,7 +1,3 @@
-# Welcome to Remix!
-
-- 📖 [Remix docs](https://remix.run/docs)
-
 ## Development
 
 Run the dev server:
@@ -23,18 +19,36 @@ Then run the app in production mode:
 ```sh
 npm start
 ```
+This project implements a Responsive Snap Grid System using Remix. It is designed to allow admins to create interactive quiz questions and users to interact with and answer those quizzes. The system supports two primary modes:
 
-Now you'll need to pick a host to deploy it to.
+### Admin View: 
+Enables admins to configure quizzes by dragging and dropping components onto a grid.
 
-### DIY
+### User View: 
+Allows users to view and interact with the quizzes set up by admins.
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+## Tech Stack
 
-Make sure to deploy the output of `npm run build`
+#### Frontend: Remix, React
+#### Backend: Node.js, Express.js
+#### Styling: CSS, TailwindCSS
 
-- `build/server`
-- `build/client`
+##### Drag-and-drop components include:
 
-## Styling
+Progress Bar, Question Number, Timer, Question Text, Image, Four Options
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+## Demo Video: 
+https://drive.google.com/file/d/1-XZg3cwtI2tNAbtbt6eSGa9GAOGbrUFw/view?usp=sharing
+
+## Deployed link (Vercel):
+https://snap-grid-remix.vercel.app/
+
+## Backend Repo:
+https://github.com/Raunak173/backend-snap-grid
+
+## Backend Deployed:
+https://backend-snap-grid-production.up.railway.app/api/
+
+
+
+
