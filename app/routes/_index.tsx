@@ -23,16 +23,24 @@ export default function Index() {
     options: null,
   });
   return (
-    <div className="flex gap-x-10 items-start pt-20">
-      <LeftDrawer />
-      <SnapGrid
-        quizComponents={quizComponents}
-        setQuizComponents={setQuizComponents}
-      />
-      <ButtonsComponent
-        quizComponents={quizComponents}
-        setQuizComponents={setQuizComponents}
-      />
+    <div className="flex flex-col items-center gap-y-5 pt-10 bg-gray-300 h-auto w-screen md:flex-col md:gap-y-8 lg:flex-row lg:items-start lg:gap-x-10 lg:pt-20 lg:h-screen justify-center">
+      <div className="w-full md:w-3/4 lg:w-auto flex justify-center md:justify-start">
+        <LeftDrawer />
+      </div>
+      <div className="flex flex-col items-center w-full md:w-3/4 lg:w-auto gap-y-5 md:gap-y-6">
+        <div className="w-full px-4 md:px-8 lg:w-auto">
+          <SnapGrid
+            quizComponents={quizComponents}
+            setQuizComponents={setQuizComponents}
+          />
+        </div>
+        <div className="w-full px-4 md:px-8 lg:w-auto">
+          <ButtonsComponent
+            quizComponents={quizComponents}
+            setQuizComponents={setQuizComponents}
+          />
+        </div>
+      </div>
       <ToastContainer />
     </div>
   );
